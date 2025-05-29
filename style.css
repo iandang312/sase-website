@@ -1,0 +1,267 @@
+.title-container {
+   height:auto;
+   width: auto;
+}
+
+.ancizar-serif-text {
+  font-family: "Ancizar Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.center {
+ margin-left: 36%;
+  width: 50%;
+  padding: 10px;
+}
+
+
+body {
+    background-color: #F1F0E2;
+ }
+
+.sase-logo {
+ margin-top: -1%;
+ margin-left: 41%;
+ width: 10%;
+ 
+}
+
+.line {
+    margin-top: -5%;
+}
+
+.ou-logo {
+    margin-top: 1%;
+    width: 75%;
+    margin-left: 46%;
+}
+
+.text-centered {
+  text-align: center;
+}
+
+.image-section {
+    margin-top: 1%;
+}
+
+.group-pictures {
+    margin-top: 1%;
+    width: auto;
+    height: auto;
+    
+}
+
+.title-container {
+   height:auto;
+   width: auto;
+}
+
+.ancizar-serif-text {
+  font-family: "Ancizar Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+body {
+    background-color: #F1F0E2;
+ }
+
+.sase-logo {
+ margin-top: -1%;
+ margin-left: 41%;
+ width: 10%;
+ 
+}
+
+.line {
+    margin-top: -5%;
+}
+
+.ou-logo {
+    margin-top: 1%;
+    width: 75%;
+    margin-left: 46%;
+}
+
+.text-centered {
+  text-align: center;
+}
+
+.image-section {
+    margin-top: 1%;
+}
+
+.group-pictures {
+    margin-top: 1%;
+    width: auto;
+    height: auto;
+    
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #F1F0E2;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}   
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #006994;
+  color: white;
+}
+
+
+
+@layer base, demo;
+@import url(https://fonts.bunny.net/css?family=abel:400);
+
+@layer demo {
+	.carousel {
+		--items: 6;
+		--carousel-duration: 40s;
+		@media (width > 600px) {
+			--carousel-duration: 30s;
+		}
+		--carousel-width: min(
+			80vw,
+			1200px
+		); /* note - it will "break" if it gets too wide and there aren't enough items */
+		--carousel-item-width: 380px;
+		--carousel-item-height: 550px;
+		--carousel-item-gap: 2rem;
+
+		--clr-cta: rgb(0, 132, 209);
+
+		position: relative;
+		width: var(--carousel-width);
+		height: var(--carousel-item-height);
+		overflow: clip;
+
+		&[mask] {
+			/* fade out on sides */
+			mask-image: linear-gradient(
+				to right,
+				transparent,
+				black 10% 90%,
+				transparent
+			);
+		}
+
+		&[reverse] > article {
+			animation-direction: reverse;
+		}
+		
+	}
+	.carousel > article {
+		position: absolute;
+		top: 0;
+		left: calc(100% + var(--carousel-item-gap));
+		width: var(--carousel-item-width);
+		height: var(--carousel-item-height);
+		display: grid;
+		grid-template-rows: 200px auto 1fr auto;
+		gap: 0.25rem;
+		border: 1px solid light-dark(rgba(0 0 0 / 0.25), rgba(255 255 255 / 0.15));
+
+		padding-block-end: 1rem;
+		border-radius: 10px;
+		background: light-dark(white, rgba(255 255 255 / 0.05));
+		color: light-dark(rgb(49, 65, 88), white);
+
+		/* animation */
+		will-change: transform;
+		animation-name: marquee;
+		animation-duration: var(--carousel-duration);
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+		animation-delay: calc(
+			var(--carousel-duration) / var(--items) * 1 * var(--i) * -1
+		);
+		&:nth-child(1) {
+			--i: 0;
+		}
+		&:nth-child(2) {
+			--i: 1;
+		}
+		&:nth-child(3) {
+			--i: 2;
+		}
+		&:nth-child(4) {
+			--i: 3;
+		}
+		&:nth-child(5) {
+			--i: 4;
+		}
+		&:nth-child(6) {
+			--i: 5;
+		}
+	}
+	.carousel img {
+		width: 105%;
+		height: 105%;
+		object-fit: cover;
+
+		border-radius: 10px 10px 0 0;
+	}
+
+	@keyframes marquee {
+		100% {
+			transform: translateX(
+				calc(
+					(var(--items) * (var(--carousel-item-width) + var(--carousel-item-gap))) *
+						-1
+				)
+			);
+		}
+	}
+}
+
+/* general styling */
+@layer base {
+	* {
+		box-sizing: border-box;
+	}
+	:root {
+    color-scheme: light dark;
+
+    --bg-dark: rgb(2, 6, 24);
+    --bg-light: rgb(229, 229, 229);
+    --txt-light: rgb(10, 10, 10);  /* almost black */
+    --txt-dark: rgb(245, 245, 245);
+}
+
+body {
+    background-color: light-dark(var(--bg-light), var(--bg-dark));
+    color: var(--txt-light);  /* force dark text */
+    min-height: 100svh;
+    margin: 0;
+    padding: 1rem;
+    font-size: 1rem;
+    font-family: "Abel", sans-serif;
+    line-height: 1.5;
+    display: grid;
+    place-items: center;
+    gap: 2rem;
+}
+}
