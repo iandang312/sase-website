@@ -15,6 +15,7 @@
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  font-size: 125%;
 }
 
 body {
@@ -52,6 +53,11 @@ body {
     height: auto;
     
 }
+
+.social-logos {
+	margin: 0 auto;
+}
+
 
 
 /*CAROUSEL LOGIC*/
