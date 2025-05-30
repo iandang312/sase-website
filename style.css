@@ -54,17 +54,34 @@ body {
     
 }
 
+/* Entire social-logos div  */
 .social-logos {
+	display: flex;
+	background-color: #F1F0E2;
+	justify-content: center;
+	align-items: center;
 	margin: 0 auto;
+	overflow: hidden;
 }
 
-
+/* Each image will have these set traits */
+.social-logos img {
+	padding: 10px;
+	margin-top: 2px;
+	width: 80px;
+	height: 80px;
+	object-fit: contain;
+}
 
 /*CAROUSEL LOGIC*/
 /* Add a black background color to the top navigation */
 .topnav {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
   background-color: #F1F0E2;
   overflow: hidden;
+  align-items: center;
 }
 
 /* Style the links inside the navigation bar */
