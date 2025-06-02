@@ -319,20 +319,16 @@ button:active {
   max-width: 350px;
 }
 
-.task:hover {
-  box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
-  border-color: rgba(162, 179, 207, 0.2) !important;
-}
 
 .task p {
-  font-size: 15px;
+  font-size: 110%;
   margin: 1.2rem 0;
 }
 
 .tag {
   border-radius: 100px;
   padding: 4px 13px;
-  font-size: 12px;
+  font-size: 150%;
   color: #ffffff;
   background-color: #1389eb;
 }
@@ -393,10 +389,6 @@ button:active {
   font-weight: bold;
   color: #fff;
   padding: 2px;
-}
-
-.viewer span svg {
-  stroke: #fff;
 }
 
 
