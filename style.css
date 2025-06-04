@@ -5,8 +5,12 @@
 }
 
 .title-container {
-   height:auto;
+   height: auto;
    width: auto;
+   background-image: url('images/background-banner.gif');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
 }
 
 .arial-text {
@@ -60,6 +64,7 @@ body {
 	align-items: center;
 	margin: 0 auto;
 	overflow: hidden;
+  padding-top: 0px;
 }
 
 /* Each image will have these set traits */
@@ -71,6 +76,12 @@ body {
 	object-fit: contain;
 }
 
+/* Icon animation when hovering */
+#icon:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
 /*CAROUSEL LOGIC*/
 /* Add a black background color to the top navigation */
 .topnav {
@@ -80,6 +91,7 @@ body {
   background-color: #1C1C1C ;
   overflow: hidden;
   align-items: center;
+  padding-bottom: 0px;
 }
 
 /* Style the links inside the navigation bar */
@@ -401,4 +413,23 @@ button:active {
   padding: 2px;
 }
 
+.background {
+  background-color: white;
+  border-radius: 5px;
+  width: 85%;
+  text-align: center;
+}
 
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
