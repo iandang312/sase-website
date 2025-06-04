@@ -64,7 +64,7 @@ body {
 /* Entire social-logos div  */
 .social-logos {
 	display: flex;
-	background-color: #1C1C1C ;
+	background: transparent;
 	justify-content: center;
 	align-items: center;
 	margin: 0 auto;
@@ -93,7 +93,7 @@ body {
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  background-color: #1C1C1C ;
+  background: transparent;
   overflow: hidden;
   align-items: center;
   padding-bottom: 0px;
